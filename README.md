@@ -1,17 +1,16 @@
-# [Hotel Website]()
-___
+# [Hotel Website](https://hotel-website-react.netlify.app)
 <br>
 
 ## Demo
-___
+
 video here
 
 ## Overview
-___
+
 A web application developed to present the information of a hotel, including the room rates, hotel's concept, the facilities provided and so on. The objective of this project is to demonstrate the development of  single page application mainly with ***ReactJS, React-Router*** and ***Javascript***. Furthermore, the project is using Contentful as a Content Management System to host and deliver the contents: room prices, capacities, photos, etc. The application is deployed on Netlify platfom.<br><br>
 
 ## Key Topics
-___
+
 In this section, I aim to clarify my approach in building some interesting features during the development of this application, hopefully this helps you understand the code better.<br><br>
 
 ### [React JS](https://reactjs.org/tutorial/tutorial.html)
