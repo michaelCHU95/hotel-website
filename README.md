@@ -1,9 +1,10 @@
 # [Hotel Website](https://hotel-website-react.netlify.app)
-<br>
+[![Netlify Status](https://api.netlify.com/api/v1/badges/69772cb9-403d-40c7-a3e7-691a67496f31/deploy-status)](https://app.netlify.com/sites/hotel-website-react/deploys)
 
-## Demo
 
-video here
+## DEMO
+
+![DEMO]( src/images/gif/demo.gif)
 
 ## Overview
 
@@ -120,7 +121,32 @@ useEffect(()=>{
 <br>
 
 ### [Contentful](https://contentful.github.io/contentful.js/contentful/8.5.0/)
+To request and fetch the data from Contentful, you must download its Javascript SDK.
+```
+npm install contentful
+```
+Basically, each of the data stored at the Contentful described as an *ENTRY*, the fomat is identical to a Javascript Object. Therefore, we need to fetch all the relevant entries asynchronously. To do that, we need to use Content Delivery API (**createClient & getEntries**) from contentful module (the downloaded SDK).
+```javascript
+const contentful = require("contentful");
 
+// Create a client object
+const client = contentful.createClient({
+	space: "", //your spaceID
+	accessToken: "" //your access token
+});
+
+//Fetch Data
+client.getEntries()
+	.then(response=>console.log(response.items))
+	.catch(console.error)
+/* or */
+async function () {
+	const response = await getEntries();
+	console.log(response);
+}
+```
+Note that the getEntries is returning a Promise Object instead of fetching the JSON data directly. Please refer to Contentful documentation for details.
+<br><br>
 
 ### Useful Modules
 There are some useful modules applied in this project, feel free to try them out:
